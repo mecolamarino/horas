@@ -1,0 +1,41 @@
+<h1>Listar Computadoras</h1>
+
+<table class="table table-striped table-bordered table">
+  <tr>
+    <th>Empresa</th>
+    <th>Mac</th>
+    <th>Fecha de compra</th>
+    <th>Motherboard</th>
+    <th>Micro</th>
+    <th>HD</th>
+    <th>Memoria</th>
+    <th>Cantidad Memorias</th>
+    <th>Monitor</th>
+    <th>Sistema</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @computers.each do |computer| %>
+  <tr>
+    <td><%= computer.company.nombre %></td>
+    <td><%= computer.mac %></td>
+    <td><%= computer.fechacompra %></td>
+    <td><%= computer.motherboard.modelo %> <%= computer.motherboard.mark.nombre %></td>
+    <td><%= computer.microprocessor.modelo %> <%= computer.microprocessor.nombre %> <%= computer.microprocessor.velocidad %></td>
+    <td><%= computer.disk.mark.nombre%> <%= computer.disk.capacidad %></td>
+    <td><%= computer.memory.capacidad %> <%= computer.memory.mark.nombre %></td>
+    <td><%= computer.cantidadmemoria %></td>
+    <td><%= computer.screen.mark.nombre %> <%= computer.screen.size.pulgadas %> <%= computer.screen.modelo %></td>
+    <td><%= computer.system.nombre %><%= computer.system.version %></td>
+    <td><%= link_to raw("<i class='icon-search icon-white'></i>"), computer, class: 'btn btn-warning' %></td>
+    <td><%= link_to 'Edit', edit_computer_path(computer) %></td>
+    <td><%= link_to 'Destroy', computer, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nueva Computadora', new_computer_path, class: 'btn btn-primary' %>

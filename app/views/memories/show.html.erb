@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Capacidad:</b>
+  <%= @memory.capacidad %>
+</p>
+
+<p>
+  <b>Mark:</b>
+  <%= @memory.mark.nombre %>
+</p>
+
+
+<%= link_to 'Edit', edit_memory_path(@memory) %> |
+<%= link_to 'Back', memories_path %>

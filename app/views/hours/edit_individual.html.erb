@@ -1,0 +1,51 @@
+<% form_tag :report, :url => {:action => 'update_reports'}, :method => :put do %>
+<table>
+<tr>
+    <th>Autorizado</th>
+</tr>
+<% @hours.each do |hour| %>
+<% fields_for "hour[]", hour do |f| %>
+<div class="field">
+    <%= f.label :Empresa %><br />
+    <%= collection_select(:hour, :company_id, Company.order("nombre"), :id, :nombre ) %>
+  </div>
+  <div class="field">
+    <%= f.label :detalle %><br />
+    <%= f.text_area :detalle %>
+  </div>
+  <div class="field">
+    <%= f.label :horas %><br />
+    <%= f.text_field :horas %>
+  </div>
+  <div class="field">
+    <%= f.label :tecnico %><br />
+    <%= collection_select(:hour, :owner_id, Owner.order("name"), :id, :name ) %>
+  </div>
+  <div class="field">
+    <%= f.label :factura %><br />
+    <%= f.text_field :factura %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+   <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+  <input class="span2" size="16" type="text" value="12-02-2012">
+  <span class="add-on"><i class="icon-th"></i></span>
+</div>
+  </div>
+<% end %>
+  <div class="field">
+    <%= f.label :autorizado %><br />
+    <%= f.check_box :autorizado %>
+  </div>
+  <div class="field">
+    <%= f.label :cliente %><br />
+    <%= collection_select(:hour, :client_id, Client.order("nickname"), :id, :nickname) %>
+  </div>
+
+<% end %>
+<% end %>
+</table>
+<%= submit_tag 'Update' %>
+<% end %>
+

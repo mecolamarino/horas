@@ -1,0 +1,180 @@
+// Place all the styles related to the user_sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+/************************ALERTS******************/
+#info, #success, #warning, #error_explanation, #validation {
+border: 1px solid;
+margin: 10px 0px;
+padding:15px 10px 15px 50px;
+background-repeat: no-repeat;
+background-position: 10px center;
+}
+#info {
+color: #00529B;
+background-color: #BDE5F8;
+background-image: url('info.png');
+}
+#success {
+color: #4F8A10;
+background-color: #DFF2BF;
+background-image:url('success.png');
+}
+#warning {
+color: #9F6000;
+background-color: #FEEFB3;
+background-image: url('warning.png');
+}
+#error_explanation {
+color: #D8000C;
+background-color: #FFBABA;
+background-image: url('error.png');}
+/****************************************************/
+ 
+
+* {
+	outline: none;
+}
+
+a {
+	color: #00A5F0;
+	text-decoration: none;
+	-webkit-transition: color .2s linear;
+	-moz-transition: color .2s linear;
+}
+
+a:hover {
+	color: #24BBFF;
+}
+
+::selection {
+	background: #E92C6C;
+	color: white;
+	text-shadow: 0 1px rgba(0, 0, 0, .2);
+}
+
+::-moz-selection {
+	background: #E92C6C;
+	color: white;
+	text-shadow: 0 1px rgba(0, 0, 0, .2);
+}
+
+::-o-selection {
+	background: #E92C6C;
+	color: white;
+	text-shadow: 0 1px rgba(0, 0, 0, .2);
+}
+
+body#login-page {
+	min-width: 600px;
+}
+
+body {
+	margin: 0;
+	background-color: #fff;
+	color: #222;
+	font: 11px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	min-width: 1080px;
+}
+
+.login-wrap .mensaje {
+	text-shadow: 0 1px 0 #EEE;
+	color: #222;
+	text-align: center;
+	width: 600px;
+	padding: 15px 0 0;
+	margin: 0 auto;
+	margin-top: 110px;
+}
+
+.login-wrap h2 {
+	font-size: 28px;
+	margin: 0;
+}
+
+
+form#new_user_session {
+	width: 280px;
+	margin: 15px auto;
+	background: url("separador.png") no-repeat top center;
+	padding-top: 30px;
+}
+
+form.new_user_session .field {
+	margin-bottom: 10px;
+}
+
+
+
+form.new_user_session label {
+	display: block;
+	font-weight: bold;
+	font-size: 12px;
+	color: #212121;
+	text-shadow: 0 1px 0 #EEE;
+	margin-bottom: 8px;
+}
+
+form#form-logeo input.text {
+	width: 258px;
+}
+
+form.new_user_session input.text {
+	font-size: 14px;
+	border-color: #DDD;
+	-webkit-transition: border-color .2s linear;
+	-moz-transition: border-color .2s linear;
+	border: 1px solid #BBB;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	box-shadow: 0 1px 0 #eee;
+	-webkit-box-shadow: 0 1px 0 #eee;
+	-moz-box-shadow: 0 1px 0 #eee;
+	display: block;
+	width: auto;
+	border-image: initial;
+}
+
+form input.text, form input.search, .contact-wrapper textarea {
+	padding: 10px;
+	margin: 0;
+	font: 14px "HelveticaNeue", Helvetica, Arial, sans-serif;
+}
+
+form.new_user_session label span {
+	color: #878787;
+	font-weight: normal;
+}
+
+form.new_user_session .btnlogeo {
+	overflow: hidden;
+}
+
+form.new_user_session #login-submit {
+	height: 36px;
+	width: 280px;
+	padding: 0 0 1px;
+}
+
+form.new_user_session a.button, form.new_user_session #login-submit {
+	cursor: pointer;
+	display: block;
+	line-height: 34px;
+	padding: 0 20px;
+	font-size: 12px;
+	font-weight: bold;
+	font-family: inherit;
+	background-color: #00A5F0;
+	color: white;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border: 1px solid rgba(0, 0, 0, .2);
+	box-shadow: 0 0 0 1px rgba(255, 255, 255, .4) inset, 0 1px #fff;
+	-moz-box-shadow: 0 0 0 1px rgba(255, 255, 255, .4) inset, 0 1px #fff;
+	-webkit-box-shadow: 0 0 0 1px rgba(255, 255, 255, .4) inset, 0 1px #fff;
+	text-shadow: 0 -1px rgba(0, 0, 0, .2);
+	text-align: center;
+	border-image: initial;
+}

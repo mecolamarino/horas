@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Mark:</b>
+  <%= @disk.mark_id %>
+</p>
+
+<p>
+  <b>Modelo:</b>
+  <%= @disk.modelo %>
+</p>
+
+<p>
+  <b>Cache:</b>
+  <%= @disk.cache %>
+</p>
+
+<p>
+  <b>Capacidad:</b>
+  <%= @disk.capacidad %>
+</p>
+
+
+<%= link_to 'Edit', edit_disk_path(@disk) %> |
+<%= link_to 'Back', disks_path %>

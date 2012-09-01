@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Modelo:</b>
+  <%= @motherboard.modelo %>
+</p>
+
+<p>
+  <b>Mark:</b>
+  <%= @motherboard.mark.nombre %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_motherboard_path(@motherboard) %> |
+<%= link_to 'Back', motherboards_path %>

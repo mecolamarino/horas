@@ -1,0 +1,16 @@
+<%= render "shared/error_messages", :target => @user %>
+
+<p>
+  <b>Name:</b>
+  <%=h @user.name %>
+</p>
+
+<p>
+  <b>Login:</b>
+  <%=h @user.login %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_account_path %>

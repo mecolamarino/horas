@@ -1,0 +1,29 @@
+<%= form_for(@printer) do |f| %>
+  <% if @printer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@printer.errors.count, "error") %> prohibited this printer from being saved:</h2>
+
+      <ul>
+      <% @printer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :modelo %><br />
+    <%= f.text_field :modelo %>
+  </div>
+  <div class="field">
+    <%= f.label :mark_id %><br />
+    <%= collection_select(:printer, :mark_id, Mark.order("nombre"), :id, :nombre ) %>
+  </div>
+  <div class="field">
+    <%= f.label :type_id %><br />
+    <%= collection_select(:printer, :type_id, Type.order("nombre"), :id, :nombre ) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

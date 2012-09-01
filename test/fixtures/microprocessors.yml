@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  modelo: MyString
+  nombre: MyString
+  velocidad: MyString
+  mark_id: MyString
+
+two:
+  modelo: MyString
+  nombre: MyString
+  velocidad: MyString
+  mark_id: MyString

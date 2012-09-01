@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  modelo: MyString
+  mark_id: MyString
+  size_id: MyString
+  type_id: MyString
+
+two:
+  modelo: MyString
+  mark_id: MyString
+  size_id: MyString
+  type_id: MyString

@@ -1,0 +1,52 @@
+<h1>Listar Horas</h1>
+<%= form_tag edit_individual_hours_path do %>
+  <table class="table table-striped table-bordered ">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Empresa</th>
+        <th>Detalle</th>
+        <th>Horas</th>
+        <th>Tecnico</th>
+        <th>Factura</th>
+        <th>Fecha</th>
+        <th>Autorizado</th>
+        <th>Cliente</th>
+        <th></th>
+        <% unless current_user.client %><th></th><% end %>
+        <% if permitted_to? :create, :hours  %>       <th></th><% end %>
+      </tr>
+    </thead>
+    <tbody>
+      <% @hours.each do |hour| %>
+        <tr>
+          <td><%= check_box_tag "hour_ids[]", hour.id %></td>
+          <td><%= hour.company.nombre %></td>
+          <td><%= hour.detalle %></td>
+          <td><%= hour.horas %></td>
+          <td><%= hour.owner.name %></td>
+          <td><%= hour.factura %></td>
+          <td><%= hour.fecha %></td>
+          <td><%= hour.autorizado %></td>
+          <td><%= hour.client.nickname if hour.client %></td>
+           <% unless current_user.client %>
+	  <td><%= link_to raw("<i class='icon-search icon-white'></i>"), hour, class: 'btn btn-info' %></td>
+	   <% end %>
+          <td>
+            <% if current_user.client %>
+              <% if hour.autorizado == false %>    
+                <%= link_to raw("<i class='icon-edit icon-white'></i>"), edit_hour_path(hour), class: 'btn btn-warning' %>
+              <% end %>
+            <% elsif %>
+              <%= link_to raw("<i class='icon-edit icon-white'></i>"), edit_hour_path(hour), class: 'btn btn-warning' %>
+            <% end %>
+	  </td>
+          <% if permitted_to? :create, :hours  %>      <td><%= link_to raw("<i class='icon-remove icon-white'></i>"), hour, confirm: 'Are you sure?', method: :delete, class: 'btn btn-danger' %></td><% end %>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <%= submit_tag "Edit Checked" %>
+  <br />
+<% end %>
+<%= link_to 'Crear Horas', new_hour_path, class: 'btn btn-primary' %>

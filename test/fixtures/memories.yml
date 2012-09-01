@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  capacidad: MyString
+  mark_id: MyString
+
+two:
+  capacidad: MyString
+  mark_id: MyString

@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Modelo:</b>
+  <%= @scanner.modelo %>
+</p>
+
+<p>
+  <b>Mark:</b>
+  <%= @scanner.mark.nombre %>
+</p>
+
+
+<%= link_to 'Edit', edit_scanner_path(@scanner) %> |
+<%= link_to 'Back', scanners_path %>

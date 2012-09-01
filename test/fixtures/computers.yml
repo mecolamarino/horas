@@ -1,0 +1,59 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  company_id: MyString
+  ip: MyString
+  nombre: MyString
+  password: MyString
+  mac: MyString
+  numserie: MyString
+  fechacompra: MyString
+  motherboard_id: MyString
+  fechacompmother: MyString
+  microprocessor_id: MyString
+  fechacompmicro: MyString
+  memory_id: MyString
+  cantidadmemoria: MyString
+  fechacompmemoria: MyString
+  printer_id: MyString
+  fechacompimpresora: MyString
+  scanner_id: MyString
+  fechacompscanner: MyString
+  screen_id: MyString
+  fechacompmonitor: MyString
+  system_id: MyString
+  fechacompsisop: MyString
+  numerolicen: MyString
+  placavideo: MyString
+  placared: MyString
+  unidadoptica: MyString
+  aclaraciones: MyText
+
+two:
+  company_id: MyString
+  ip: MyString
+  nombre: MyString
+  password: MyString
+  mac: MyString
+  numserie: MyString
+  fechacompra: MyString
+  motherboard_id: MyString
+  fechacompmother: MyString
+  microprocessor_id: MyString
+  fechacompmicro: MyString
+  memory_id: MyString
+  cantidadmemoria: MyString
+  fechacompmemoria: MyString
+  printer_id: MyString
+  fechacompimpresora: MyString
+  scanner_id: MyString
+  fechacompscanner: MyString
+  screen_id: MyString
+  fechacompmonitor: MyString
+  system_id: MyString
+  fechacompsisop: MyString
+  numerolicen: MyString
+  placavideo: MyString
+  placared: MyString
+  unidadoptica: MyString
+  aclaraciones: MyText

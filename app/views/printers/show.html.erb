@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Modelo:</b>
+  <%= @printer.modelo %>
+</p>
+
+<p>
+  <b>Mark:</b>
+  <%= @printer.mark.nombre %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%= @printer.type.nombre %>
+</p>
+
+
+<%= link_to 'Edit', edit_printer_path(@printer) %> |
+<%= link_to 'Back', printers_path %>

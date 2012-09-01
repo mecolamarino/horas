@@ -1,0 +1,158 @@
+<hr/>
+<%= form_for(@computer) do |f| %>
+  <% if @computer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@computer.errors.count, "error") %> prohibited this computer from being saved:</h2>
+
+      <ul>
+      <% @computer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :Empresa %><br />
+    <%= collection_select(:computer, :company_id, Company.order("nombre"), :id, :nombre ) %>
+  </div>
+  <div class="field">
+    <%= f.label :IP %><br />
+    <%= f.text_field :ip %>
+  </div>
+  <div class="field">
+    <%= f.label :Nombre_cpu %><br />
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </div>
+  <div class="field">
+    <%= f.label :mac %><br />
+    <%= f.text_field :mac %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_de_serie %><br />
+    <%= f.text_field :numserie %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_de_compra %><br />
+    <%= f.text_field :fechacompra %>
+  </div>
+  <div class="field">
+    <%= f.label :motherboard %><br />
+    <%= motherboards_collection_select%>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_compra_mother %><br />
+    <%= f.text_field :fechacompmother %>
+  </div>
+  <div class="field">
+    <%= f.label :microprocesador %><br />
+    <%=  microprocessors_collection_select %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_compra_micro %><br />
+    <%= f.text_field :fechacompmicro %>
+  </div>
+  <div class="field">
+    <%= f.label :memoria %><br />
+    <%=  memories_collection_select %>
+  </div>
+  <div class="field">
+    <%= f.label :cantidad_memorias %><br />
+    <%= f.text_field :cantidadmemoria %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_compra_memoria %><br />
+    <%= f.text_field :fechacompmemoria %>
+  </div>
+  <div class="field">
+    <%= f.label :disco_rigido %><br />
+    <%=  disks_collection_select %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_compra_hd %><br />
+    <%= f.text_field :fechacompdisk %>
+  </div>
+  <div class="field">
+    <%= f.label :impresora %><br />
+    <%= printers_collection_select%>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_compra_impresora %><br />
+    <%= f.text_field :fechacompimpresora %>
+  </div>
+  <div class="field">
+    <%= f.label :escaner %><br />
+    <%= scanners_collection_select%>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_compra_escaner %><br />
+    <%= f.text_field :fechacompscanner %>
+  </div>
+  <div class="field">
+    <%= f.label :monitor %><br />
+    <%=  screens_collection_select %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_compra_monitor %><br />
+    <%= f.text_field :fechacompmonitor %>
+  </div>
+  <div class="field">
+    <%= f.label :sistema_operativo %><br />
+    <%= system_collection_select %>
+  </div>
+  <div class="field">
+    <%= f.label :fecha_compra_sis_op %><br />
+    <%= f.text_field :fechacompsisop %>
+  </div>
+  <div class="field">
+    <%= f.label :numero_licencia %><br />
+    <%= f.text_field :numerolicen %>
+  </div>
+  <div class="field">
+    <%= f.label :Antivirus %><br />
+    <%= f.text_field :antivirus %>
+  </div>
+  <div class="field">
+    <%= f.label :Software_adicional %><br />
+    <%= f.text_field :software2 %>
+  </div>
+  <div class="field">
+    <%= f.label :Software_adicional %><br />
+    <%= f.text_field :software3 %>
+  </div>
+  <div class="field">
+    <%= f.label :Software_adicional %><br />
+    <%= f.text_field :software4 %>
+  </div>
+  <div class="field">
+    <%= f.label :Software_adicional %><br />
+    <%= f.text_field :software5 %>
+  </div>
+  <div class="field">
+    <%= f.label :Software_adicional %><br />
+    <%= f.text_field :software6 %>
+  </div>
+  <div class="field">
+    <%= f.label :placa_de_video %><br />
+    <%= f.text_field :placavideo %>
+  </div>
+  <div class="field">
+    <%= f.label :placa_de_red %><br />
+    <%= f.text_field :placared %>
+  </div>
+  <div class="field">
+    <%= f.label :unidad_optica %><br />
+    <%= f.text_field :unidadoptica %>
+  </div>
+  <div class="field">
+    <%= f.label :aclaraciones %><br />
+    <%= f.text_area :aclaraciones %>
+  </div>
+<hr/>
+  <div class="actions">
+    <%= f.submit 'Crear Computadora' %>
+  </div>
+<% end %>

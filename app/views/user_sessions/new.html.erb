@@ -1,0 +1,29 @@
+<div class="mensaje">
+        <h1>Horas con el mismo login de siempre.</h1>
+        </div>
+<%= form_for @user_session, :id => 'form-logeo', :class => 'generic', :as => :user_session, :url => { :action => "create" } do |f| %>
+
+
+        <div id="login-user" class="field">
+          <%= f.label :Usuario,  :class => 'generic' %>
+          <%= f.text_field :login, :id => 'login-username', :class => 'text', :placeholder =>'Nombre de Usuario', :maxlength =>'37', :tabindex => '3' %>
+        </div>
+
+        <div id="login-pass" class="field">
+
+          <%= f.label :Clave %>
+          <%= f.password_field :password, :id => 'login-password', :class => 'text', :maxlength =>'37', :placeholder =>'********', :tabindex => '3'  %>
+          <span><a href="#"><h4> Recuperar clave</h4></a></span>
+        </div>
+        <div>
+                 <%= f.check_box :remember_me %><%= f.label :No_cerrar_sesion %>
+        </div>
+        <div class="btnlogeo">
+          <%= f.submit "Iniciar Sesion", :id => 'login-submit' %>
+        </div>
+        <div><h4> Desarrollado por AsCorp Soft.</h4></div>
+
+
+
+<% end %>
+

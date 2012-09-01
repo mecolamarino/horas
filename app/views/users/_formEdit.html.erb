@@ -1,0 +1,75 @@
+<%= render "shared/error_messages", :target => @user %>
+
+<p>
+  <%= form.label :name %><br />
+  <%= form.text_field :name %>
+</p>
+<p>
+  <%= form.label :lastname %><br />
+  <%= form.text_field :lastname %>
+</p>
+<p>
+  <%= form.label :password, form.object.new_record? ? nil : "Change password" %><br />
+  <%= form.password_field :password %>
+</p>
+<p>
+  <%= form.label :password_confirmation %><br />
+  <%= form.password_field :password_confirmation %>
+</p>
+<p>
+  <%= form.label :email %><br />
+  <%= form.email_field :email %>
+</p>
+
+<p>
+  <%= form.label :dni_type %><br />
+  <%= form.text_field :dni_type %>
+</p>
+<p>
+  <%= form.label :dni %><br />
+  <%= form.text_field :dni %>
+</p>
+<p>
+  <%= form.label :born_date %><br />
+  <%= form.text_field :born_date %>
+</p>
+<p>
+  <%= form.label :address %><br />
+  <%= form.text_field :address %>
+</p>
+<p>
+  <%= form.label :phone %><br />
+  <%= form.phone_field :phone %>
+</p>
+<p>
+  <%= form.label :picture_url %><br />
+  <%= form.text_field :picture_url %>
+</p>
+<p>
+  <%= form.label :affiliate_number %><br />
+  <%= form.text_field :affiliate_number %>
+</p>
+<p>
+  <%= form.label :sex %><br />
+  <%= form.text_field :sex %>
+</p>
+<p>
+  <%= form.label :marital_status %><br />
+  <%= form.text_field :marital_status %>
+</p>
+<p>
+  <%= form.label :enrollment %><br />
+  <%= form.text_field :enrollment %>
+</p>
+<p>
+  <%= form.label :medical_history %><br />
+  <%= form.text_field :medical_history %>
+</p>
+<p>
+  <%= form.label :occupation %><br />
+  <%= form.text_field :ocupation %>
+</p>
+<p>
+  <%= form.label :studies %><br />
+  <%= form.text_field :studies %>
+</p>

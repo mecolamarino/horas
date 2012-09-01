@@ -1,0 +1,25 @@
+<%= form_for(@memory) do |f| %>
+  <% if @memory.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@memory.errors.count, "error") %> prohibited this memory from being saved:</h2>
+
+      <ul>
+      <% @memory.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :capacidad %><br />
+    <%= f.text_field :capacidad %>
+  </div>
+  <div class="field">
+    <%= f.label :mark_id %><br />
+    <%= collection_select(:memory, :mark_id, Mark.order("nombre"), :id, :nombre ) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

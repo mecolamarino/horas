@@ -1,0 +1,189 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <b>Empresa:</b>
+<h2>  <%= @computer.company.nombre %></h2>
+</p>
+<hr/>
+<div class="row">
+<div class="span4">
+
+<h2>Informacion</h2><hr/>
+
+<p>
+  <b>Ip:</b>
+  <%= @computer.ip %>
+</p>
+
+<p>
+  <b>Nombre de la Computadora:</b>
+  <%= @computer.nombre %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @computer.password %>
+</p>
+
+<p>
+  <b>Mac:</b>
+  <%= @computer.mac %>
+</p>
+
+<p>
+  <b>Numero de Serie:</b>
+  <%= @computer.numserie %>
+</p>
+
+<p>
+  <b>Fecha de Compra:</b>
+  <%= @computer.fechacompra %> 
+</p> 
+</div></span> 
+<div class="span4"> 
+
+<h2>Hardware</h2><hr/>
+
+<p>
+  <b>Placa Madre:</b>
+  <%= @computer.motherboard.modelo %> <%= @computer.motherboard.mark.nombre%>
+</p>
+
+<p>
+  <b>Fecha Compra Mother:</b>
+  <%= @computer.fechacompmother %>
+</p>
+
+<p>
+  <b>Microprocesador:</b>
+  <%= @computer.microprocessor.modelo %> <%= @computer.microprocessor.nombre %> <%= @computer.microprocessor.velocidad %> <%= @computer.microprocessor.mark.nombre%>
+</p>
+
+<p>
+  <b>Fecha Compra Micro:</b>
+  <%= @computer.fechacompmicro %>
+</p>
+
+<p>
+  <b>Memoria Ram:</b>
+  <%= @computer.memory.capacidad %> <%= @computer.memory.mark.nombre%>
+</p>
+
+<p>
+  <b>Cantidad de Bancos Memoria:</b>
+  <%= @computer.cantidadmemoria %>
+</p>
+
+<p>
+  <b>Fecha Compra Memoria:</b>
+  <%= @computer.fechacompmemoria %>
+</p>
+
+<p>
+  <b>Disco Duro:</b>
+  <%= @computer.disk.mark.nombre %> <%= @computer.disk.modelo %> <%= @computer.disk.cache %> <%= @computer.disk.capacidad %>
+</p>
+
+<p>
+  <b>Fecha Compra HD:</b>
+  <%= @computer.fechacompdisk %>
+</p>
+
+<p>
+  <b>Impresora:</b>
+  <%= @computer.printer.modelo %> <%= @computer.printer.type.nombre %> <%= @computer.printer.mark.nombre %>
+</p>
+
+<p>
+  <b>Fecha Compra Impresora:</b>
+  <%= @computer.fechacompimpresora %>
+</p>
+
+<p>
+  <b>Escaner:</b>
+  <%= @computer.scanner.modelo %> <%= @computer.scanner.mark.nombre %>
+</p>
+
+<p>
+  <b>Fecha Compra Escaner:</b>
+  <%= @computer.fechacompscanner %>
+</p>
+
+<p>
+  <b>Monitor:</b>
+  <%= @computer.screen.mark.nombre %> <%= @computer.screen.size.pulgadas %> <%= @computer.screen.modelo %>
+</p>
+
+<p>
+  <b>Fecha Compra Monitor:</b>
+  <%= @computer.fechacompmonitor %>
+</p>
+
+<p>
+  <b>Placa de Video:</b>
+  <%= @computer.placavideo %>
+</p>
+
+<p>
+  <b>Placa de Red:</b>
+  <%= @computer.placared %>
+</p>
+
+<p>
+  <b>Unidad Optica:</b>
+  <%= @computer.unidadoptica %>
+</p>
+
+</div></span>
+<div class="span4">
+
+<h2>Software</h2><hr/>
+
+<p>
+  <b>Systema Operativo:</b>
+  <%= @computer.system.nombre %> <%= @computer.system.version %>
+</p>
+
+<p>
+  <b>Fecha Compra Sistema OP:</b>
+  <%= @computer.fechacompsisop %>
+</p>
+
+<p>
+  <b>Numero Licencia:</b>
+  <%= @computer.numerolicen %>
+</p>
+
+<p>
+  <b>Antivirus:</b>
+  <%= @computer.antivirus %>
+</p>
+
+<p>
+  <b>Software:</b>
+  <%= @computer.software2 %>
+</p>
+
+<p>
+  <b>Software:</b>
+  <%= @computer.software3 %>
+</p>
+
+<p>
+  <b>Software:</b>
+  <%= @computer.software5 %>
+</p>
+
+<p>
+  <b>Software:</b>
+  <%= @computer.software6 %>
+</p>
+</div></span>
+</div><hr/>
+
+<p>
+  <b>Aclaraciones:</b>
+  <%= @computer.aclaraciones %>
+</p>
+<hr/>
+<%= link_to 'Editar', edit_computer_path(@computer), class: 'btn' %> |
+<%= link_to 'Volver', computers_path, class: 'btn' %>

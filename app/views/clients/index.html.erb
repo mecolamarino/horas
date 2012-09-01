@@ -1,0 +1,38 @@
+<h1>Listado de Clientes</h1>
+
+<table class="table table-striped table-bordered table">
+  <tr>
+    <th>Nombre</th>
+    <th>Apellido</th>
+    <th>Nickname</th>
+    <th>Usuario</th>
+    <th>Company</th>
+    <th>Email1</th>
+    <th>Email2</th>
+    <th>Telefono</th>
+    <th>Direccion</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @clients.each do |client| %>
+  <tr>
+    <td><%= client.nombre %></td>
+    <td><%= client.apellido %></td>
+    <td><%= client.nickname %></td>
+    <td><%= client.user_id %></td>
+    <td><%= client.company.nombre %></td>
+    <td><%= client.email1 %></td>
+    <td><%= client.email2 %></td>
+    <td><%= client.telefono %></td>
+    <td><%= client.direccion %></td>
+    <td><%= link_to raw("<i class='icon-search icon-white'></i>"), client, class: 'btn btn-warning' %></td>
+    <td><%= link_to raw("<i class='icon-edit icon-white'></i>"), edit_client_path(client), class: 'btn btn-warning' %></td>
+    <td><%= link_to raw("<i class='icon-remove icon-white'></i>"), client, confirm: 'Esta Seguro?', method: :delete, class: 'btn btn-warning' %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'Nuevo Cliente', new_client_path, class: 'btn btn-warning' %>

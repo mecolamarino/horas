@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Detalle:</b>
+  <%= @hour.detalle %>
+</p>
+
+<p>
+  <b>Horas:</b>
+  <%= @hour.horas %>
+</p>
+
+<p>
+  <b>Tecnico:</b>
+  <%= @hour.owner.name %> <%= @hour.owner.lastname %>
+</p>
+
+<p>
+  <b>Factura:</b>
+  <%= @hour.factura %>
+</p>
+
+<p>
+  <b>Fecha:</b>
+  <%= @hour.fecha %>
+</p>
+
+<p>
+  <b>Autorizado:</b>
+  <%= @hour.autorizado %>
+</p>
+
+<p>
+  <b>Cliente:</b>
+  <%= @hour.client_id %>
+</p>
+
+
+<%= link_to 'Editar', edit_hour_path(@hour), class: 'btn btn-small' %> |
+<%= link_to 'Volver', hours_path, class: 'btn btn-small' %>

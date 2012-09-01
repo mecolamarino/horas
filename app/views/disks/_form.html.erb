@@ -1,0 +1,33 @@
+<%= form_for(@disk) do |f| %>
+  <% if @disk.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@disk.errors.count, "error") %> prohibited this disk from being saved:</h2>
+
+      <ul>
+      <% @disk.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :mark_id %><br />
+    <%= collection_select(:disk, :mark_id, Mark.order("nombre"), :id, :nombre ) %>
+  </div>
+  <div class="field">
+    <%= f.label :modelo %><br />
+    <%= f.text_field :modelo %>
+  </div>
+  <div class="field">
+    <%= f.label :cache %><br />
+    <%= f.text_field :cache %>
+  </div>
+  <div class="field">
+    <%= f.label :capacidad %><br />
+    <%= f.text_field :capacidad %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

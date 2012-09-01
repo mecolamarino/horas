@@ -1,0 +1,33 @@
+<%= form_for(@screen) do |f| %>
+  <% if @screen.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@screen.errors.count, "error") %> prohibited this screen from being saved:</h2>
+
+      <ul>
+      <% @screen.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :modelo %><br />
+    <%= f.text_field :modelo %>
+  </div>
+  <div class="field">
+    <%= f.label :mark_id %><br />
+    <%= collection_select(:screen, :mark_id, Mark.order("nombre"), :id, :nombre ) %>
+  </div>
+  <div class="field">
+    <%= f.label :size_id %><br />
+    <%= collection_select(:screen, :size_id, Size.order("pulgadas"), :id, :pulgadas ) %>
+  </div>
+  <div class="field">
+    <%= f.label :type_id %><br />
+    <%= collection_select(:screen, :type_id, Type.order("nombre"), :id, :nombre ) %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

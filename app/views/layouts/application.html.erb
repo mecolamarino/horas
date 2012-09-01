@@ -1,0 +1,143 @@
+<!DOCTYPE html> <html> <head>
+  <title>Horas</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %> </head>
+  <style>
+   body {
+padding-top: 60px;
+padding-bottom: 60px;
+}
+   
+  </style>
+ <body>
+
+<div class="container">  <div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container">
+<a class="brand" href="/home/index">AsCorp</a>
+<% if permitted_to? :create, :hours  %>
+  <ul class="nav">
+
+  <li class="dropdown">
+    <a href="#"
+          class="dropdown-toggle"
+          data-toggle="dropdown">
+          Ascorp<b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+	<li class="nav-header">Tecnicos</li>
+          <li> <a href="/owners/new">Crearnos</a></li>
+          <li> <a href="/owners">Listarnos</a></li>
+<li class="divider"></li>
+	<li class="nav-header">Proyectos</li>
+	<li><a href="/proyects/new">Crear</a></li>
+	<li><a href="/proyects">Listar</a></li>
+<li class="divider"></li>
+        <li class="nav-header">Alta Hardware</li>
+          <li> <a href="/motherboards/new">Motherboards</a></li>
+          <li> <a href="/microprocessors/new">Micros</a></li>
+          <li> <a href="/memories/new">Memorias</a></li>
+          <li> <a href="/marks/new">Marcas</a></li>
+	  <li> <a href="/printers/new">Impresoras</a></li>
+          <li> <a href="/screens/new/">Monitores</a></li>
+	  <li> <a href="/sizes/new/">Medida Monitor</a></li>
+	  <li> <a href="/types/new/">Tipo Monitor/Impresora</a></li>
+          <li> <a href="/systems/new/">Sistemas Operativos</a></li>
+          <li> <a href="/disks/new/">Discos Duros</a></li>
+<li class="divider"></li>
+        <li class="nav-header">Listar Hardware</li>
+          <li> <a href="/motherboards">Motherboards</a></li>
+          <li> <a href="/microprocessors">Micros</a></li>
+          <li> <a href="/memories">Memorias</a></li>
+          <li> <a href="/marks">Marcas</a></li>
+          <li> <a href="/printers">Impresoras</a></li>
+          <li> <a href="/screens">Monitores</a></li>
+          <li> <a href="/sizes">Medida Monitor</a></li>
+          <li> <a href="/types">Tipo Monitor/Impresora</a></li>
+          <li> <a href="/systems">Sistemas Operativos</a></li>
+          <li> <a href="/disks">Discos Duros</a></li>
+
+	   
+
+    </ul>
+  </li>
+  </ul>
+   <ul class="nav">
+
+  <li class="dropdown">
+    <a href="#"
+          class="dropdown-toggle"
+          data-toggle="dropdown">
+          Empresa<b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+<li class="nav-header">Datos Empresa</li>
+           <a href="/companies/new">Crear</a>
+           <a href="/companies">Listar</a>
+<li class="divider"></li>
+<li class="nav-header">Clientes</li>
+	   <a href="/clients/new">Crear</a>
+           <a href="/clients">Listar</a>
+<li class="divider"></li>
+<li class="nav-header">Computadoras</li>
+           <a href="/computers/new">Crear</a>
+           <a href="/computers">Listar</a>
+
+    </ul>
+  </li>
+  </ul>
+  
+<% end %>
+  <ul class="nav">
+  <li class="dropdown">
+    <a href="#"
+          class="dropdown-toggle"
+          data-toggle="dropdown">
+          Horas <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+       <% if permitted_to? :create, :hours  %>   <a href="/hours/new">Crear</a><% end %>
+          <a href="/hours">Listar</a>
+    </ul>
+  </li>
+  </ul>
+<ul class="nav pull-right ">
+<ul class="nav">
+ <li><a href="#">IP: <%= current_user.current_login_ip %></a></li><li class="divider-vertical"><li><a href="#">Usuario: <%= current_user.name %></a></li><li class="divider-vertical">
+</ul>
+ <li class="dropdown">
+    <a href="#"
+          class="dropdown-toggle"
+          data-toggle="dropdown">
+          Opciones <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+       <% if permitted_to? :create, :hours  %>   <a href="/signup">Crear Usuario</a><% end %>
+          <a href="/logout">Salir</a>
+		
+    </ul>
+     
+  </li>
+<ul>
+
+   </div>
+
+  </div> </div> 
+
+</div>
+
+<div class="container"> <header id="header">
+
+</header>
+
+<article id="article"> <section> <div class="row12"> <ul class="thumbnails">
+  <li >
+    <a href="#" class="thumbnail">
+      <img src="http://tdgroup.ge/images/stories/thumbs/com_content/243/thumbl_940x240.jpg" alt="">
+    </a>
+  </li></ul> </div> </section> <section id="yield"> <div class="row">  <div class="span12"> <ruby> <%= yield%> </ruby></div></div> </section> </article>
+
+<aside id="costado">
+
+</aside> <footer></footer></div></body>

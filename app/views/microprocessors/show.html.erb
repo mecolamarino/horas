@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Modelo:</b>
+  <%= @microprocessor.modelo %>
+</p>
+
+<p>
+  <b>Nombre:</b>
+  <%= @microprocessor.nombre %>
+</p>
+
+<p>
+  <b>Velocidad:</b>
+  <%= @microprocessor.velocidad %>
+</p>
+
+<p>
+  <b>Mark:</b>
+  <%= @microprocessor.mark.nombre %>
+</p>
+
+
+<%= link_to 'Edit', edit_microprocessor_path(@microprocessor) %> |
+<%= link_to 'Back', microprocessors_path %>

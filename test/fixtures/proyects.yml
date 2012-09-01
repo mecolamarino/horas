@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  url: MyString
+  nombre: MyString
+  company_id: MyString
+  estado: MyString
+  detalle: MyText
+  observacion: MyText
+  owner_id: MyString
+
+two:
+  url: MyString
+  nombre: MyString
+  company_id: MyString
+  estado: MyString
+  detalle: MyText
+  observacion: MyText
+  owner_id: MyString

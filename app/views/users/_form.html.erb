@@ -1,0 +1,38 @@
+
+<title>Horas</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %> </head>
+  <style>
+   body {
+padding-top: 60px;
+padding-bottom: 60px;
+}
+
+  </style>
+
+
+<%= render "shared/error_messages", :target => @user %>
+<div class="well">
+<%= form_for @user do |f| %>
+
+<p>
+  <%= f.label :name %><br />
+  <%= f.text_field :name %>
+</p>
+<p>
+  <%= f.label :login %><br />
+  <%= f.text_field :login %>
+</p>
+<p>
+  <%= f.label :password, f.object.new_record? ? nil : "Change password" %><br />
+  <%= f.password_field :password %>
+</p>
+<p>
+  <%= f.label :password_confirmation %><br />
+  <%= f.password_field :password_confirmation %>
+</p>
+
+
+<%= f.submit "Registrar", class: 'btn btn-primary' %>
+<% end %></div>

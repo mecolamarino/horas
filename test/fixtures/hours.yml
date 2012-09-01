@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  detalle: MyText
+  horas: 1.5
+  owner_id: 1
+  factura: MyString
+  fecha: 2012-05-24
+  hora: 2012-05-24 11:26:09
+  autorizado: false
+  client_id: 1
+
+two:
+  detalle: MyText
+  horas: 1.5
+  owner_id: 1
+  factura: MyString
+  fecha: 2012-05-24
+  hora: 2012-05-24 11:26:09
+  autorizado: false
+  client_id: 1

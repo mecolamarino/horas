@@ -1,0 +1,29 @@
+<h1>Listar Microprocesadores</h1>
+
+<table class="table table-striped table-bordered table">
+  <tr>
+    <th>Modelo</th>
+    <th>Nombre</th>
+    <th>Velocidad</th>
+    <th>Marca</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @microprocessors.each do |microprocessor| %>
+  <tr>
+    <td><%= microprocessor.modelo %></td>
+    <td><%= microprocessor.nombre %></td>
+    <td><%= microprocessor.velocidad %></td>
+    <td><%= microprocessor.mark.nombre %></td>
+    <td><%= link_to raw("<i class='icon-search icon-white'></i>"), microprocessor, class: 'btn btn-warning' %></td>
+    <td><%= link_to 'Edit', edit_microprocessor_path(microprocessor), class: 'btn btn-warning' %></td>
+    <td><%= link_to 'Destroy', microprocessor, confirm: 'Are you sure?', method: :delete, class: 'btn btn-warning' %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'Nuevo Microprocesador', new_microprocessor_path, class: 'btn btn-primary' %>
